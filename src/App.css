@@ -14,11 +14,11 @@
 
 .App-header {
   font-family: 'Finger Paint', cursive;
-  font-size: 3em;
-  color: darkred;
-  background: #1A75CF;
-  margin-top: 0px;
-  margin-bottom: 20px;
+  font-size: 3.6em;
+  font-weight: 900;
+  color: black; 
+  margin-top: 40px;
+  margin-bottom: 10px;
   padding: 0 20px;
 }
 
@@ -31,7 +31,7 @@
 button {
   font-family: 'KoHo', sans-serif;
   text-transform: uppercase;
-  background-color: lawngreen;
+  background-color: turquoise;
   color: black;
   border: none;
   transition: all 0.2s;
@@ -46,22 +46,22 @@ button {
 }
 
 .button1 {
-  background-color: greenyellow; 
+  background-color: turquoise; 
 }
 
 .button1:hover {
-  background-color: yellowgreen;
+  background-color: darkcyan;
 }
 
 button:hover {
-  background-color: mediumseagreen;
+  background-color: darkcyan;
 }
 
 .Category, .Score, .Lives {
     font-family: 'KoHo', sans-serif;
     font-size: 1.6em;
     font-weight: 900;
-    color: darkred;
+    color: black;
     padding: 0 20px;
 }
 
