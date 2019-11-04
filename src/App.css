@@ -202,6 +202,7 @@ img.Great-job {
 .App-header {
     margin-top: 30px;
   }
+  /*
   .word-hint{
     top: 38rem;
     left: 1rem;
@@ -212,8 +213,10 @@ img.Great-job {
     position: absolute;
     margin-bottom: 2rem;
   }
+  */
 }
 
+/*
 @media (max-width: 360px){
   .word-hint{
     top: 44rem;
@@ -280,6 +283,95 @@ img.Great-job {
     height: 14rem;
     font-size: 1.65em;
     line-height: 1.65rem;
+  }
+}
+
+*/
+
+@media (min-width: 641px){
+  .word-hint{
+    position: relative;
+    color: black;
+    padding: 15px;
+    background-color: beige;
+    border-radius: 10px;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: left;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width:961px)  { 
+  /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+  .word-hint{
+    position: relative;
+    color: black;
+    padding: 15px;
+    background-color: beige;
+    border-radius: 10px;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: left;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width:1025px) { 
+  /* big landscape tablets, laptops, and desktops */ 
+  .word-hint{
+    position: relative;
+    color: black;
+    padding: 15px;
+    background-color: beige;
+    border-radius: 10px;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: left;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
+    margin-top: 2%;
+  }
+}
+
+@media (min-width:1281px) { 
+  /* hi-res laptops and desktops */ 
+  .word-hint{
+    position: relative;
+    color: black;
+    padding: 15px;
+    background-color: beige;
+    border-radius: 10px;
+    font-family: 'KoHo', sans-serif;
+    font-weight: bold;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    text-align: left;
+    width: 50%;
+    height: auto;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    margin: 0 auto;
+    margin-top: 2%;
   }
 }
 
