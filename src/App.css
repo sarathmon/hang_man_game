@@ -251,10 +251,10 @@ img.Great-job {
 
 @media (min-width: 1280px) {
   .word-hint{
-    top: 35rem;
+    top: 500px;
     left: 51rem;
     width: 27rem;
-    height: 13rem;
+    height: 10.5rem;
     font-size: 1.55em;
     line-height: 1.5rem;
   }
