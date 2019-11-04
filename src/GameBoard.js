@@ -111,6 +111,7 @@ class GameBoard extends Component {
                     Words left: {this.state.words.length - this.state.currWordIndex}</div>
                 <Word word={word} guessedLetters={this.state.guessedLetters}
                     isLetterInWord={this.isLetterInWord} showGreatJob={this.state.showGreatJob} />
+                <WordHint hint={hint} />
                 <GameKeyboard guessLetter={this.guessLetter} guessedLetters={this.state.guessedLetters}
                     isLetterInWord={this.isLetterInWord} word={word} />
                 {this.state.lives < 10 ?
@@ -118,7 +119,6 @@ class GameBoard extends Component {
                     <img className="Man" src={process.env.PUBLIC_URL + image} alt="hangman-drawing" />
                 </div>
                 : null}
-                <WordHint hint={hint} />
             </div>
         );
     }
