@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Word from './Word';
+import WordHint from './WordHint';
 import GameKeyboard from './GameKeyboard';
 import swal from 'sweetalert';
 
@@ -8,7 +9,7 @@ class GameBoard extends Component {
         super(props);
         this.state = {
             words: [...this.props.words], score: 0, lives: this.props.lives, currWordIndex: 0, guessedLetters: "",
-            remainingLettersInCurrWord: this.props.words[0].split(''), showGreatJob: false
+            remainingLettersInCurrWord: this.props.words[0]["word"].split(''), showGreatJob: false
         };
     }
 
@@ -27,7 +28,7 @@ class GameBoard extends Component {
                 setTimeout(() => {
                     this.setState(prevState => ({
                         currWordIndex: prevState.currWordIndex + 1, guessedLetters: "",
-                        remainingLettersInCurrWord: prevState.words[prevState.currWordIndex + 1].split(''),
+                        remainingLettersInCurrWord: prevState.words[prevState.currWordIndex + 1]["word"].split(''),
                         lives: this.props.lives, showGreatJob: false
                     }));
                 }, 1000);
@@ -59,7 +60,7 @@ class GameBoard extends Component {
         if(this.state.lives===0){
             this.props.restartGame()
         }
-        if (this.isLetterInWord(letter, this.state.words[this.state.currWordIndex])) { // correct guess
+        if (this.isLetterInWord(letter, this.state.words[this.state.currWordIndex]["word"])) { // correct guess
             this.setState(prevState => ({
                 score: prevState.score + 10, guessedLetters: prevState.guessedLetters + letter,
                 remainingLettersInCurrWord: prevState.remainingLettersInCurrWord.filter(element =>
@@ -90,7 +91,7 @@ class GameBoard extends Component {
     componentDidMount() {
         this.setState({
             words: [...this.props.words], score: 0, lives: this.props.lives, currWordIndex: 0, guessedLetters: "",
-            remainingLettersInCurrWord: this.props.words[0].split(''), showGreatJob: false
+            remainingLettersInCurrWord: this.props.words[0]["word"].split(''), showGreatJob: false
         });
         document.addEventListener("keypress", this.onHandleKeyPress);
     }
@@ -100,7 +101,8 @@ class GameBoard extends Component {
     }
 
     render() {
-        let word = this.state.words[this.state.currWordIndex];
+        let word = this.state.words[this.state.currWordIndex]["word"];
+        let hint = this.state.words[this.state.currWordIndex]["hint"];
         let image = `/assets/hangman${this.state.lives}.png`;
 
         return (
@@ -109,6 +111,7 @@ class GameBoard extends Component {
                     Words left: {this.state.words.length - this.state.currWordIndex}</div>
                 <Word word={word} guessedLetters={this.state.guessedLetters}
                     isLetterInWord={this.isLetterInWord} showGreatJob={this.state.showGreatJob} />
+                <WordHint hint={hint} />
                 <GameKeyboard guessLetter={this.guessLetter} guessedLetters={this.state.guessedLetters}
                     isLetterInWord={this.isLetterInWord} word={word} />
                 {this.state.lives < 10 ?
