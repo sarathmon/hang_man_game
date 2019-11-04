@@ -176,9 +176,110 @@ img.Great-job {
   color: grey;
 }
 
-@media (max-width: 575px) {
+.word-hint{
+  position: fixed;
+  color: black;
+  padding: 15px;
+  background-color: beige;
+  border-radius: 10px;
+  font-family: 'KoHo', sans-serif;
+  font-weight: bold;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  text-align: left;
+  top: 31rem;
+  left: 57rem;
+  width: 31rem;
+  height: 13rem;
+  font-size: 1.5em;
+  line-height: 1.75rem;
+}
+
+.word-hint-title{
+  color: red;
+}
+
+@media (width: 575px) {
 .App-header {
     margin-top: 30px;
+  }
+  .word-hint{
+    top: 38rem;
+    left: 1rem;
+    width: 24rem;
+    height: 12rem;
+    font-size: 1.5em;
+    line-height: 1.65rem;
+    position: absolute;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 360px){
+  .word-hint{
+    top: 44rem;
+    left: 1rem;
+    margin: 0 auto;
+    height: 12rem;
+    width: 20rem;
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    position: absolute;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (width: 768px) {
+  .word-hint{
+    top: 49rem;
+    left: 11rem;
+    width: 25rem;
+    height: 13rem;
+    font-size: 1.55em;
+    line-height: 1.75rem;
+  }
+}
+
+@media (width: 1024px) {
+  .word-hint{
+    top: 34rem;
+    left: 39rem;
+    width: 23rem;
+    height: 12rem;
+    font-size: 1.5em;
+    line-height: 1.65rem;
+  }
+}
+
+@media (width: 1366px) {
+  .word-hint{
+    top: 48rem;
+    left: 52rem;
+    width: 31rem;
+    height: 14rem;
+    font-size: 1.75em;
+    line-height: 1.75rem;
+  }
+}
+
+@media (width: 1280px) {
+  .word-hint{
+    top: 35rem;
+    left: 51rem;
+    width: 27rem;
+    height: 13rem;
+    font-size: 1.55em;
+    line-height: 1.5rem;
+  }
+}
+
+@media (width: 1440px) {
+  .word-hint{
+    top: 41rem;
+    left: 59rem;
+    width: 29rem;
+    height: 14rem;
+    font-size: 1.65em;
+    line-height: 1.65rem;
   }
 }
 
