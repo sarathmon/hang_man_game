@@ -34,7 +34,7 @@ class App extends Component {
     render() {
         return (
             <div className="App">
-                <h1 className="App-header">The HANGMAN</h1>
+                <h1 className="App-header">RETAIL HANGMAN</h1>
                 <button type="button" onClick={this.startGame}>START GAME</button>
                 <button type="button" className="button1" onClick={this.restartGame}>RESTART GAME</button>
                 {(this.state.chosenWords && this.state.chosenCategory === "") ?
